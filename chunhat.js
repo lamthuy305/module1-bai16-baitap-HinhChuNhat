@@ -29,7 +29,7 @@ class Chunhat {
         return this.chieuRong*this.chieuDai;
     }
     getChuVi() {
-        return this.chieuDai+this.chieuRong;
+        return (this.chieuDai+this.chieuRong)*2;
     }
     //
     // setX() {
