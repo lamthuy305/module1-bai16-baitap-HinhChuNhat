@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="chunhat.js"></script>
+
+</head>
+<body>
+<canvas id="myCanvas" width="1400" height="700" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    // for (let i = 1; i < 4; i++) {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let chieuDai = Math.floor(Math.random() * 200);
+        let chieuRong = Math.floor(Math.random() * 200);
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        let hinhChuNhat = new Chunhat(x, y, chieuDai, chieuRong);
+        let area = hinhChuNhat.getArea();
+        let chiVi = hinhChuNhat.getChuVi();
+        alert("Chu vi là : " + chiVi + " , diện tích là " + area)
+        ctx.beginPath();
+        ctx.fillStyle = hinhChuNhat.getRandomColor();
+        ctx.fillRect(x, y, chieuDai, chieuRong);
+
+    // }
+</script>
+</body>
+</html>
